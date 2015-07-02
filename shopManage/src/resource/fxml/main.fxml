@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wang.dalltree.shopmanage.controller.MainController">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <MenuBar HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                     <items>
+                    <MenuItem mnemonicParsing="false" text="关闭" />
+                     </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="main_CloseBtn" mnemonicParsing="false" onAction="#closeButtonAction" text="X" />
+         </children>
+      </HBox>
+      <Separator VBox.vgrow="ALWAYS" />
+      <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="导航面板">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="module_buy" mnemonicParsing="false" onAction="#openBuyModuleAction" prefWidth="100.0" text="采购" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator VBox.vgrow="ALWAYS" />
+      <HBox alignment="CENTER" prefHeight="30.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" opacity="0.8" text="2015年6月26日" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label text="|" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label opacity="0.8" text="操作员：管理员" HBox.hgrow="ALWAYS" />
+            <Label text="|" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label opacity="0.5" text="软件：标准0.0.1版" HBox.hgrow="ALWAYS" />
+            <Label text="|" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" opacity="0.5" text="意见反馈至 www.dalltree.wang" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
