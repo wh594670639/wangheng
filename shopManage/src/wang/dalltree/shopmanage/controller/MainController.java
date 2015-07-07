@@ -3,11 +3,16 @@ package wang.dalltree.shopmanage.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import wang.dalltree.shopmanage.common.Const;
 import wang.dalltree.shopmanage.util.AppUtil;
 
 public class MainController {
 	@FXML private Button main_CloseBtn;
 	@FXML private Button module_buy;
+	@FXML private Pane changePane;
+	@FXML private HBox defaultTabHBox;
 	
 	/**
 	 * ¹Ø±Õ°´Å¥
@@ -18,6 +23,6 @@ public class MainController {
 	}
 	
 	@FXML protected void openBuyModuleAction(ActionEvent event) {
-		System.out.println("aaaaaaaaaaaaaaa");
+		AppUtil.changePane(changePane, Const.PANE1_FXML);
 	}
 }

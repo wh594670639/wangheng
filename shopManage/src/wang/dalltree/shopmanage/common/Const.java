@@ -11,4 +11,6 @@ public class Const {
 	public static final String MAIN_FXML = "main_fxml";
 	public static final String TEST_FXML = "test_fxml";
 	public static final String TEST1_FXML = "test1_fxml";
+	public static final String PANE1_FXML = "pane1_fxml";
+	public static final String PANE2_FXML = "pane2_fxml";
 }

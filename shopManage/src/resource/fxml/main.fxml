@@ -38,7 +38,10 @@
                            </HBox.margin>
                         </Button>
                         <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <Pane HBox.hgrow="ALWAYS" />
+                        <Pane fx:id="changePane" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button layoutX="132.0" layoutY="100.0" mnemonicParsing="false" text="默认" />
+                           </children></Pane>
                      </children>
                   </HBox>
                </content>

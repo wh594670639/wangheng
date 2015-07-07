@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import wang.dalltree.shopmanage.common.Const;
@@ -60,6 +62,23 @@ public class AppUtil {
 		return root;
 	}
 	
+	public static Pane getFxmlPane(String pageName) {
+		Properties pps = getAppConfig();
+		if (pps.isEmpty()) {
+			return null;
+		}
+
+		String path = pps.getProperty(pageName);
+
+		Pane pane = null;
+		try {
+			pane = FXMLLoader.load(AppUtil.class.getResource(path));
+		} catch (IOException e) {
+		}
+
+		return pane;
+	}
+	
 	public static Stage getStage() {
 		stage.hide();
 		stage = new Stage();
@@ -89,5 +108,29 @@ public class AppUtil {
 		stage.initStyle(StageStyle.DECORATED);
 		
 		return stage;
+	}
+	
+	/**
+	 * 主要针对主页面中经常变动的区域
+	 * 可模块化，把同一区域显示，且不同时间点的状态进行模块化
+	 * 此方法可变换这一Pane区域的模块
+	 * @param pane
+	 * @param fxmlPaneName
+	 * @return
+	 */
+	public static boolean changePane(Pane pane, String fxmlPaneName) {
+		try {
+			pane.getChildren().clear();
+			Pane newPane = getFxmlPane(Const.PANE1_FXML);
+			
+			for (int i = 0; i < newPane.getChildren().size(); i++) {
+				Node e = newPane.getChildren().get(i);
+				pane.getChildren().add(e);
+			}
+		} catch (Exception e) {
+			return false;
+		}
+		
+		return true;
 	}
 }
