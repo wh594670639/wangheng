@@ -9,6 +9,5 @@ public class Const {
 	 */
 	public static final String LOGIN_FXML = "login_fxml";
 	public static final String MAIN_FXML = "main_fxml";
-	public static final String TEST_FXML = "test_fxml";
-	public static final String TEST1_FXML = "test1_fxml";
+	public static final String CAIGOU_FXML = "caigou_fxml";
 }
