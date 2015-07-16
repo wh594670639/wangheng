@@ -7,19 +7,19 @@ import wang.dalltree.shopmanage.dao.UserDao;
 
 public class UserService extends CommonService {
 	/**
-	 * Ğ£ÑéÓÃ»§ÃûºÍÃÜÂë
+	 * æ ¡éªŒç”¨æˆ·åå’Œå¯†ç 
 	 * @param username
 	 * @param password
 	 * @return 
-	 * 00:³É¹¦
-	 * 01:ÓÃ»§ÃûÎª¿Õ
-	 * 02:ÎŞ´ËÓÃ»§
-	 * 03:ÃÜÂëÊäÈë´íÎó
+	 * 00:æˆåŠŸ
+	 * 01:ç”¨æˆ·åä¸ºç©º
+	 * 02:æ— æ­¤ç”¨æˆ·
+	 * 03:å¯†ç è¾“å…¥é”™è¯¯
 	 */
 	public ServiceResultObject checkUser(String username, String password) {
 		if (null == username || "".equals(username)) {
 			result.setResult("01");
-			result.setObject("ÇëÊäÈëÓÃ»§Ãû");
+			result.setObject("è¯·è¾“å…¥ç”¨æˆ·å");
 			return result;
 		}
 		
@@ -27,13 +27,13 @@ public class UserService extends CommonService {
 		User user = userDao.getUser(username);
 		if (null == user) {
 			result.setResult("02");
-			result.setObject("ÎŞ´ËÓÃ»§");
+			result.setObject("æ— æ­¤ç”¨æˆ·");
 		} else if (!user.getPassword().equals(password)) {
 			result.setResult("03");
-			result.setObject("ÃÜÂëÊäÈë´íÎó");
+			result.setObject("å¯†ç è¾“å…¥é”™è¯¯");
 		} else {
 			result.setResult("00");
-			result.setObject("µÇÂ¼³É¹¦");
+			result.setObject("ç™»å½•æˆåŠŸ");
 		}
 		
 		return result;

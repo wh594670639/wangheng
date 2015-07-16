@@ -4,9 +4,9 @@ import java.sql.Connection;
 
 public class DBInfo {
 	/**
-	 * ·µ»ØDB½á¹û£º
-	 * 00:Õý³£
-	 * 01:Òì³£
+	 * è¿”å›žDBç»“æžœï¼š
+	 * 00:æ­£å¸¸
+	 * 01:å¼‚å¸¸
 	 */
 	private String result;
 	private Connection conn;

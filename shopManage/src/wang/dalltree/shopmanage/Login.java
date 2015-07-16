@@ -15,17 +15,17 @@ public class Login extends Application{
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		// 保存舞台
+		// 淇濆瓨鑸炲彴
 		AppUtil.setStage(stage);
 		
-		// 设置Title
+		// 璁剧疆Title
 		stage.setTitle(AppUtil.getAppTitle());
-		// 读取资源文件
+		// 璇诲彇璧勬簮鏂囦欢
 		Parent root = AppUtil.getFxml(Const.LOGIN_FXML);
 		
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
-//		stage.setAlwaysOnTop(true);// 总是最前端-流氓做法
+//		stage.setAlwaysOnTop(true);// 鎬绘槸鏈�鍓嶇-娴佹皳鍋氭硶
 		stage.initStyle(StageStyle.TRANSPARENT);
 		
 		stage.show();

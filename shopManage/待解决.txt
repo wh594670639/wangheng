@@ -1,3 +1,11 @@
-1.APP���Ͻ�ͼ�������ʾ��
-2.����Label���һ��һ����ʾ��layout X/Yָ���������)��
-3.
+1.APP左上角图标如何显示？
+2.两个Label如何一左一右显示（layout X/Y指定坐标除外)
+  --已解决
+  --解决办法：
+           两个Label之间加一个HBox，然后追加属性HBox.vgrow="ALWAYS"，即可把两个Label撑开。
+3.页面初始化的地方在哪？
+  --已解决
+  --解决办法：
+          在Controller层实现接口implements Initializable，并实现方法initialize。
+4.一个Label在Pane中的layoutX、layoutY都为0，
+     如何在加载页面时、放大、缩小和拉伸窗体时随窗体大小变化而一直保持居中状态？

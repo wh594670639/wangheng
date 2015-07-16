@@ -12,7 +12,7 @@ public class DBUtil {
 		
 	}
 	
-	// È¡µÃÊı¾İ¿âÁ¬½Ó
+	// å–å¾—æ•°æ®åº“è¿æ¥
 	public static DBInfo getConnection() {
 		dbInfo.setResult(DBInfo.NORMAL);
 		try {
@@ -24,12 +24,12 @@ public class DBUtil {
 			dbInfo.setConn(DriverManager.getConnection(url));
 		} catch (Exception e) {
 			dbInfo.setResult(DBInfo.EXCEPTION);
-			dbInfo.setErrorInfo("Êı¾İ¿âÁ¬½ÓÊ§°Ü");
+			dbInfo.setErrorInfo("æ•°æ®åº“è¿æ¥å¤±è´¥");
 		}
 		
 		if (null == dbInfo.getConn()) {
 			dbInfo.setResult(DBInfo.EXCEPTION);
-			dbInfo.setErrorInfo("´ò¿ªÊı¾İ¿âÊ§°Ü");
+			dbInfo.setErrorInfo("æ‰“å¼€æ•°æ®åº“å¤±è´¥");
 		}
 		
 		return dbInfo;

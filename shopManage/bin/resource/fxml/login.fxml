@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.Object?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<Pane fx:id="loginPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wang.dalltree.shopmanage.controller.LoginController">
+	<children>
+		<Label layoutX="83.0" layoutY="142.0" text="用户名：">
+         <font>
+            <Font size="20.0" />
+         </font>
+		</Label>
+		<Label layoutX="84.0" layoutY="185.0" text="密   码：">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<TextField fx:id="username" layoutX="163.0" layoutY="143.0" promptText="邮箱" />
+		<Label layoutX="307.0" layoutY="190.0" text="忘记密码" />
+		<PasswordField fx:id="password" layoutX="163.0" layoutY="186.0" promptText="密码" />
+		<Button fx:id="loginBtn" layoutX="163.0" layoutY="233.0" mnemonicParsing="false" onAction="#loginButtonAction" text="登录" />
+      	<Label fx:id="statusText" layoutX="163.0" layoutY="118.0" prefHeight="15.0" prefWidth="137.0" textFill="#fc0202" />
+      <Button fx:id="closeBtn" layoutX="260.0" layoutY="233.0" mnemonicParsing="false" onAction="#closeButtonAction" text="退出" />
+	</children>
+</Pane>

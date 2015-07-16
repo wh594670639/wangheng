@@ -5,7 +5,7 @@ public class Const {
 	public static final String SYSTEM_TITLE = "system_title";
 	
 	/**
-	 * 各页面的在app.properties中的Key
+	 * 鍚勯〉闈㈢殑鍦╝pp.properties涓殑Key
 	 */
 	public static final String LOGIN_FXML = "login_fxml";
 	public static final String MAIN_FXML = "main_fxml";

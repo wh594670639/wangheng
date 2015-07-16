@@ -91,17 +91,17 @@ public class AppUtil {
 	}
 	
 	/**
-	 * È¡µÃ»­²¼£º°üÀ¨²ÎÊı²¿·Ö£¬²¢·µ»Ø¸Ã»­²¼£¬°üÀ¨°´Å¥ÊÂ¼şµÄÌí¼Ó
-	 * @param appTitle£ºÌ¨Í·
-	 * @param fxml£ºFXMLÎÄ¼şÃû
-	 * @param stageStyle£º»­²¼ÏÔÊ¾ÀàĞÍ
+	 * å–å¾—ç”»å¸ƒï¼šåŒ…æ‹¬å‚æ•°éƒ¨åˆ†ï¼Œå¹¶è¿”å›è¯¥ç”»å¸ƒï¼ŒåŒ…æ‹¬æŒ‰é’®äº‹ä»¶çš„æ·»åŠ 
+	 * @param appTitleï¼šå°å¤´
+	 * @param fxmlï¼šFXMLæ–‡ä»¶å
+	 * @param stageStyleï¼šç”»å¸ƒæ˜¾ç¤ºç±»å‹
 	 * @return
 	 */
 	public static Stage getStage(String appTitle, String fxml) {
 		Stage stage = AppUtil.getStage();
-		// ÉèÖÃTitle
+		// è®¾ç½®Title
 		stage.setTitle(appTitle);
-		// ¶ÁÈ¡×ÊÔ´ÎÄ¼ş
+		// è¯»å–èµ„æºæ–‡ä»¶
 		Parent root = AppUtil.getFxml(fxml);
 		
 		Scene scene = new Scene(root);
@@ -112,9 +112,9 @@ public class AppUtil {
 	}
 	
 	/**
-	 * Ö÷ÒªÕë¶ÔÖ÷Ò³ÃæÖĞ¾­³£±ä¶¯µÄÇøÓò
-	 * ¿ÉÄ£¿é»¯£¬°ÑÍ¬Ò»ÇøÓòÏÔÊ¾£¬ÇÒ²»Í¬Ê±¼äµãµÄ×´Ì¬½øĞĞÄ£¿é»¯
-	 * ´Ë·½·¨¿É±ä»»ÕâÒ»PaneÇøÓòµÄÄ£¿é
+	 * ä¸»è¦é’ˆå¯¹ä¸»é¡µé¢ä¸­ç»å¸¸å˜åŠ¨çš„åŒºåŸŸ
+	 * å¯æ¨¡å—åŒ–ï¼ŒæŠŠåŒä¸€åŒºåŸŸæ˜¾ç¤ºï¼Œä¸”ä¸åŒæ—¶é—´ç‚¹çš„çŠ¶æ€è¿›è¡Œæ¨¡å—åŒ–
+	 * æ­¤æ–¹æ³•å¯å˜æ¢è¿™ä¸€PaneåŒºåŸŸçš„æ¨¡å—
 	 * @param pane
 	 * @param fxmlPaneName
 	 * @return
