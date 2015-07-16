@@ -4,9 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 import wang.dalltree.shopmanage.common.Const;
 import wang.dalltree.shopmanage.util.AppUtil;
+import javafx.scene.layout.Pane;
 
 public class MainController {
 	@FXML

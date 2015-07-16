@@ -75,7 +75,6 @@ public class AppUtil {
 		try {
 			pane = FXMLLoader.load(AppUtil.class.getResource(path));
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 
 		return pane;
@@ -124,7 +123,6 @@ public class AppUtil {
 		try {
 			pane.getChildren().clear();
 			Pane newPane = getFxmlPane(fxmlPaneName);
-			
 			for (int i = 0; i < newPane.getChildren().size(); i++) {
 				Node e = newPane.getChildren().get(i);
 				pane.getChildren().add(e);

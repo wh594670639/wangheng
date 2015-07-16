@@ -47,7 +47,8 @@
                                     <Font size="50" />
                                  </font>
                               </Label>
-                           </children></Pane>
+                           </children>
+                        </Pane>
                      </children>
                   </HBox>
                </content>
