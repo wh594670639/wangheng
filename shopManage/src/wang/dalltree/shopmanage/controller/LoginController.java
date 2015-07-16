@@ -35,14 +35,14 @@ public class LoginController implements Initializable{
 	@FXML
 	private Pane loginPane;
 	
-	// Ò³Ãæ³õÊ¼»¯
+	// é¡µé¢åˆå§‹åŒ–
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// °´¼üÊÂ¼ş
+		// æŒ‰é”®äº‹ä»¶
 		loginPane.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
-				// »Ø³µ¼ü
+				// å›è½¦é”®
 				if (KeyCode.ENTER.equals(event.getCode())) {
 					loginButtonAction(new ActionEvent());
 				}
@@ -57,13 +57,13 @@ public class LoginController implements Initializable{
 		UserService checkUser = new UserService();
 		ServiceResultObject result = checkUser.checkUser(username.getText().trim(), password.getText().trim());
 		
-		// Ìø×ªµ½Ö÷Ò³Ãæ
+		// è·³è½¬åˆ°ä¸»é¡µé¢
 		if (ServiceResultObject.SUCCESS.equals(result.getResult())) {
 			Stage stage = AppUtil.getStage(AppUtil.getAppTitle(), Const.MAIN_FXML);
-			stage.setMaximized(true);// È«ÆÁ
+			stage.setMaximized(true);// å…¨å±
 			stage.show();
 			
-			// µ÷ÕûÒ³Ãæ
+			// è°ƒæ•´é¡µé¢
 			Parent p = stage.getScene().getRoot();
 			Pane pane = (Pane) p.lookup("#changePane");
 			Label welcome = (Label) p.lookup("#welcome");
@@ -93,7 +93,7 @@ public class LoginController implements Initializable{
 	}
 	
 	/**
-	 * ¹Ø±Õ°´Å¥
+	 * å…³é—­æŒ‰é’®
 	 * @param event
 	 */
 	@FXML

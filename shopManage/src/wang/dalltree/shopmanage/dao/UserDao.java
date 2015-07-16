@@ -12,7 +12,7 @@ import wang.dalltree.shopmanage.common.CommonDao;
 
 public class UserDao extends CommonDao{
 	/**
-	 * 根据用户名，查找用户信息
+	 * 鏍规嵁鐢ㄦ埛鍚嶏紝鏌ユ壘鐢ㄦ埛淇℃伅
 	 * @param username
 	 * @return
 	 */

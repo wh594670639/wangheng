@@ -19,7 +19,7 @@ public class MainController {
 	private Label welcome;
 	
 	/**
-	 * �رհ�ť
+	 * 关闭按钮
 	 * @param event
 	 */
 	@FXML
